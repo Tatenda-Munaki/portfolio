@@ -1,0 +1,71 @@
+<!-- Save as static/assets/projects/realestate.svg -->
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17122b"></stop>
+      <stop offset="1" stop-color="#0e0a1b"></stop>
+    </linearGradient>
+    <linearGradient id="glow3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38d9a9"></stop>
+      <stop offset="1" stop-color="#7b2ff7"></stop>
+    </linearGradient>
+    <filter id="shadow3"><feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#38d9a9" flood-opacity="0.35"></feDropShadow></filter>
+  </defs>
+
+  <rect x="30" y="30" rx="28" width="1220" height="660" fill="url(#bg3)" stroke="#262049" stroke-width="2"></rect>
+  <rect x="46" y="46" rx="24" width="1188" height="628" fill="#18122b" opacity="0.35"></rect>
+
+  <rect x="70" y="72" rx="14" width="420" height="48" fill="#1e1636" stroke="#2f2557"></rect>
+  <text x="90" y="104" font-family="Inter" font-size="24" fill="#d6fff0" font-weight="700">Real Estate Price Prediction</text>
+
+  <!-- left: city skyline + trend line -->
+  <g filter="url(#shadow3)">
+    <rect x="90" y="160" rx="22" width="560" height="420" fill="#1c1535" stroke="#32295a"></rect>
+    <!-- skyline bars -->
+    <g fill="#2a214a">
+      <rect x="130" y="430" width="40" height="130"></rect>
+      <rect x="180" y="380" width="48" height="180"></rect>
+      <rect x="238" y="410" width="36" height="150"></rect>
+      <rect x="284" y="360" width="50" height="200"></rect>
+      <rect x="344" y="395" width="44" height="165"></rect>
+      <rect x="398" y="370" width="46" height="190"></rect>
+      <rect x="454" y="410" width="38" height="150"></rect>
+      <rect x="504" y="355" width="54" height="205"></rect>
+    </g>
+    <!-- price line -->
+    <polyline points="120,520 190,480 250,460 310,430 370,445 430,410 490,395 550,360" fill="none" stroke="url(#glow3)" stroke-width="4"></polyline>
+  </g>
+
+  <!-- right: metrics -->
+  <g filter="url(#shadow3)">
+    <rect x="680" y="160" rx="22" width="510" height="420" fill="#1c1535" stroke="#32295a"></rect>
+    <!-- chips -->
+    <g>
+      <rect x="710" y="186" rx="12" width="160" height="56" fill="#20183c" stroke="#32295a"></rect>
+      <text x="730" y="214" font-size="14" fill="#d6fff0" font-family="Inter" opacity="0.9">MAE</text>
+      <text x="730" y="238" font-size="22" fill="#38d9a9" font-family="Inter" font-weight="700">$7.8k</text>
+
+      <rect x="890" y="186" rx="12" width="150" height="56" fill="#20183c" stroke="#32295a"></rect>
+      <text x="910" y="214" font-size="14" fill="#d6fff0" font-family="Inter" opacity="0.9">R² Score</text>
+      <text x="910" y="238" font-size="22" fill="#7b2ff7" font-family="Inter" font-weight="700">0.89</text>
+    </g>
+
+    <!-- feature bars -->
+    <rect x="710" y="270" width="450" height="270" rx="14" fill="#171031" stroke="#2d2353"></rect>
+    <text x="730" y="300" font-family="Inter" font-size="16" fill="#c9ffe9">Top Features</text>
+    <g fill="#38d9a9">
+      <rect x="740" y="325" width="300" height="18" rx="9"></rect>
+      <rect x="740" y="355" width="240" height="18" rx="9" opacity="0.85"></rect>
+      <rect x="740" y="385" width="210" height="18" rx="9" opacity="0.75"></rect>
+      <rect x="740" y="415" width="170" height="18" rx="9" opacity="0.65"></rect>
+      <rect x="740" y="445" width="140" height="18" rx="9" opacity="0.55"></rect>
+    </g>
+    <g fill="#9fa8ff" font-family="Inter" font-size="14">
+      <text x="1060" y="340">SqFt</text>
+      <text x="1000" y="370">Bedrooms</text>
+      <text x="970" y="400">Location</text>
+      <text x="930" y="430">Age</text>
+      <text x="900" y="460">Bathrooms</text>
+    </g>
+  </g>
+</svg>
