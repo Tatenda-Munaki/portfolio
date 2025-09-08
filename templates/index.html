@@ -1,79 +1,388 @@
+{% extends "base.html" %}
+{% block content %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tatenda Munaki | Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tatenda Munaki | Portfolio</title>
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1 class="logo">Tatenda Munaki</h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Hello, I'm <span>Tatenda</span></h2>
-            <p>Data Scientist | Machine Learning Engineer | Health Tech Enthusiast</p>
-            <a href="#projects" class="cta-btn">View My Work</a>
-        </div>
-    </section>
+<!-- ===== Hero ===== -->
+<section class="panel hero" id="home">
+  <h1 class="title gradient-text">From ideas to intelligent, scalable solutions.</h1>
+  <p class="subtitle">AI &amp; Data Science • Health Tech • Python</p>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I'm Tatenda Munaki, a master's student in Applied Data Science at Clarkson University.
-            I build data-driven solutions in health tech, predictive analytics, dashboards, and web applications.
-        </p>
-    </section>
+  <div class="cta-row">
+    <a class="btn" href="#projects">View My Work</a>
+    <a class="btn ghost" href="#contact">Contact</a>
+  </div>
+</section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill">Python</div>
-            <div class="skill">Flask</div>
-            <div class="skill">Machine Learning</div>
-            <div class="skill">SQL</div>
-            <div class="skill">R</div>
-            <div class="skill">Data Visualization</div>
-        </div>
-    </section>
+<!-- ===== About ===== -->
+<section class="panel" id="about">
+  <h2 class="section-title">About Me</h2>
+  <p class="lead">
+    I'm Tatenda Munaki, a master's student in Applied Data Science at Clarkson University. I build
+    data-driven solutions in health tech, predictive analytics, dashboards, and web applications — with a focus on
+    turning messy data into clear, actionable outcomes.
+  </p>
+</section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Real Estate Price Analysis</h3>
-                <p>Predicted U.S. housing prices using ML, visualized with dashboards.</p>
-            </div>
-            <div class="project-card">
-                <h3>Hospital Readmission Prediction</h3>
-                <p>Built predictive models to assess patient readmission risks.</p>
-            </div>
-            <div class="project-card">
-                <h3>Mental Health Chatbot</h3>
-                <p>Streamlit app detecting suicide risk using NLP and ML models.</p>
-            </div>
-        </div>
-    </section>
+<!-- ===== Skills ===== -->
+<section class="panel" id="skills">
+  <h2 class="section-title">Skills</h2>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: tatenda@example.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/tatenda">linkedin.com/in/tatenda</a></p>
-        <p>GitHub: <a href="https://github.com/Tatenda-Munaki">github.com/Tatenda-Munaki</a></p>
-    </section>
+  <div class="skills-grid">
+    <!-- Programming Languages -->
+    <article class="skill-card">
+      <div class="skill-icon" aria-hidden="true">🧩</div>
+      <h3>Programming Languages</h3>
+      <div class="tags">
+        <span class="badge">Python</span>
+        <span class="badge">PHP</span>
+        <span class="badge">SQL</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">TypeScript</span>
+        <span class="badge">R</span>
+        <span class="badge">Java</span>
+        <span class="badge">Dart (Flutter)</span>
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+      </div>
+    </article>
 
-    <footer>
-        <p>&copy; 2025 Tatenda Munaki. All Rights Reserved.</p>
-    </footer>
+    <!-- AI/ML & Deep Learning -->
+    <article class="skill-card">
+      <div class="skill-icon" aria-hidden="true">🧠</div>
+      <h3>AI/ML & Deep Learning</h3>
+      <div class="tags">
+        <span class="badge">TensorFlow</span>
+        <span class="badge">Keras</span>
+        <span class="badge">PyTorch</span>
+        <span class="badge">Scikit-learn</span>
+        <span class="badge">DeepFace</span>
+        <span class="badge">OpenCV</span>
+        <span class="badge">NumPy</span>
+        <span class="badge">Pandas</span>
+        <span class="badge">SciPy</span>
+        <span class="badge">K-Means</span>
+        <span class="badge">Weka</span>
+        <span class="badge">DL4J</span>
+        <span class="badge">ND4J</span>
+      </div>
+    </article>
+
+    <!-- BI & Analytics -->
+    <article class="skill-card">
+      <div class="skill-icon" aria-hidden="true">📊</div>
+      <h3>BI & Analytics</h3>
+      <div class="tags">
+        <span class="badge">Power BI</span>
+        <span class="badge">MS Excel</span>
+        <span class="badge">Google Analytics</span>
+        <span class="badge">Matplotlib</span>
+        <span class="badge">Seaborn</span>
+      </div>
+    </article>
+
+    <!-- Methodologies -->
+    <article class="skill-card">
+      <div class="skill-icon" aria-hidden="true">⚙</div>
+      <h3>Methodologies</h3>
+      <div class="tags">
+        <span class="badge">CRISP-DM</span>
+        <span class="badge">Agile</span>
+        <span class="badge">Scrum</span>
+        <span class="badge">Kanban</span>
+        <span class="badge">MLOps (Basics)</span>
+        <span class="badge">DevOps</span>
+        <span class="badge">QA Testing</span>
+        <span class="badge">Dashboard Lifecycle</span>
+        <span class="badge">Model Monitoring</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- (Old visual Methodologies card kept out of flow; safe to remove if unused) -->
+<div class="skill-card" style="display:none">
+  <div class="skill-icon" style="background:linear-gradient(135deg,#ffb400,#ff7e00);">
+    <img src="{{ url_for('static', filename='assets/icons/methodology.svg') }}" alt="Methodologies">
+  </div>
+  <h3>Methodologies</h3>
+  <div class="tags">
+    <span class="badge">CRISP-DM</span>
+    <span class="badge">Agile</span>
+    <span class="badge">Scrum</span>
+    <span class="badge">Kanban</span>
+    <span class="badge">MLOps</span>
+    <span class="badge">DevOps</span>
+    <span class="badge">QA Testing</span>
+  </div>
+</div>
+
+<!-- ===== Featured Projects ===== -->
+<section class="panel" id="projects">
+  <h2 class="section-title">Featured Projects</h2>
+  <p class="muted center">Innovative solutions built by Tatenda.</p>
+
+  <div class="project-grid featured">
+
+    <!-- Facial Recognition Attendance -->
+    <article class="project-card">
+      <div class="pimg">
+        <img src="{{ url_for('static', filename='assets/projects/face-attend.svg') }}"
+             alt="AI Facial Recognition Attendance System">
+      </div>
+      <h3>AI Facial Recognition Attendance System</h3>
+      <p class="muted">
+        Real-time facial detection and recognition for secure student attendance.
+        Built with Python, DeepFace, and OpenCV.
+      </p>
+      <ul class="feat">
+        <li>DeepFace for recognition</li>
+        <li>OpenCV for real-time detection</li>
+        <li>SQLite attendance logs</li>
+        <li>Tkinter admin interface</li>
+      </ul>
+      <div class="tags">
+        <span class="badge">Python</span>
+        <span class="badge">DeepFace</span>
+        <span class="badge">OpenCV</span>
+        <span class="badge">SQLite</span>
+      </div>
+      <div class="card-actions">
+        <a class="btn ghost" href="https://github.com/Tatenda-Munaki" target="_blank" rel="noopener">View Code</a>
+        <a class="btn" href="#contact">Request Demo</a>
+      </div>
+    </article>
+
+    <!-- Hospital Readmission Dashboard -->
+    <article class="project-card">
+      <div class="pimg">
+        <img src="{{ url_for('static', filename='assets/projects/readmission.svg') }}"
+             alt="Hospital Readmission Risk Dashboard">
+      </div>
+      <h3>Hospital Readmission Risk Dashboard</h3>
+      <p class="muted">
+        Predicts 30-day patient readmission risk using ML with SHAP insights for transparent clinical decisions.
+      </p>
+      <ul class="feat">
+        <li>XGBoost prediction model</li>
+        <li>SHAP feature importance</li>
+        <li>Streamlit dashboard</li>
+        <li>Batch CSV scoring</li>
+      </ul>
+      <div class="tags">
+        <span class="badge">Python</span>
+        <span class="badge">XGBoost</span>
+        <span class="badge">SHAP</span>
+        <span class="badge">Streamlit</span>
+      </div>
+      <div class="card-actions">
+        <a class="btn ghost" href="https://github.com/Tatenda-Munaki" target="_blank" rel="noopener">View Code</a>
+        <a class="btn" href="#contact">Request Demo</a>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Smaller cards -->
+  <div class="project-grid">
+    <!-- Mental Health Chatbot -->
+    <article class="project-card">
+      <div class="pimg">
+        <img src="{{ url_for('static', filename='assets/projects/mental.svg') }}" alt="Mental Health Chatbot">
+      </div>
+      <h3>Mental Health Chatbot</h3>
+      <p class="muted">Streamlit app for suicide-risk signals using simple NLP + ML.</p>
+      <div class="tags">
+        <span class="badge">Python</span>
+        <span class="badge">NLTK</span>
+        <span class="badge">Streamlit</span>
+      </div>
+    </article>
+
+    <!-- Skin Disease Classification -->
+    <article class="project-card">
+      <div class="pimg">
+        <img src="{{ url_for('static', filename='assets/projects/skin.svg') }}" alt="Skin Disease Classification">
+      </div>
+      <h3>Skin Disease Classification (CNN)</h3>
+      <p class="muted">CNN model classifying skin conditions with experiment tracking.</p>
+      <div class="tags">
+        <span class="badge">TensorFlow</span>
+        <span class="badge">Keras</span>
+        <span class="badge">OpenCV</span>
+      </div>
+    </article>
+
+    <!-- Real Estate Price Prediction -->
+    <article class="project-card">
+      <div class="pimg">
+        <img src="{{ url_for('static', filename='assets/projects/realestate.svg') }}" alt="Real Estate Price Prediction">
+      </div>
+      <h3>Real Estate Price Prediction</h3>
+      <p class="muted">Predictive models with feature engineering and dashboards.</p>
+      <div class="tags">
+        <span class="badge">Python</span>
+        <span class="badge">XGBoost</span>
+        <span class="badge">Pandas</span>
+        <span class="badge">Power BI</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== Testimonials ===== -->
+<section class="panel">
+  <h2 class="section-title">What People Say</h2>
+  <div class="t-grid">
+    <blockquote class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>“Tatenda is disciplined, insightful, and brilliant. Our data science work together has been highly productive and impactful.”</p>
+      <div class="who"><strong>Professor Sumona</strong><span class="muted"> Professor, Clarkson University</span></div>
+    </blockquote>
+
+    <blockquote class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>“He delivered a top-notch analysis of our sales. Clear, detailed, and easy for everyone to understand.”</p>
+      <div class="who"><strong>Mr. Zvidzanayi</strong><span class="muted"> Supervisor, Itro Engineering (Zimbabwe)</span></div>
+    </blockquote>
+
+    <blockquote class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>“Tatenda’s guidance turned complex ML concepts into clear study materials. His explanations helped me excel.”</p>
+      <div class="who"><strong>Professor Thevhashi</strong><span class="muted"> Professor, Clarkson University</span></div>
+    </blockquote>
+
+    <blockquote class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>“When I needed data-driven insights for our social work program, Tatenda delivered a robust dashboard that was both practical and intuitive.”</p>
+      <div class="who"><strong>C. Chitereka</strong><span class="muted"> Faculty, University of Zimbabwe</span></div>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ===== Professional Journey ===== -->
+<section class="panel" id="experience">
+  <h2 class="section-title">Professional Journey</h2>
+  <p class="muted center">
+    I’ve been working as a <strong>freelance data analyst</strong>, collaborating with companies, schools, and hospitals
+    on short-term contracts and project-based work between <strong>2020 and 2025</strong>.
+  </p>
+
+  <div class="timeline">
+
+    <!-- Freelance -->
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-card">
+        <h3>Freelance Data Analyst & Dashboard Developer</h3>
+        <p class="muted">Feb 2023 – Present • Remote &amp; On-site • Zimbabwe</p>
+        <ul class="feat">
+          <li>Hired by organizations on short-term contracts to deliver data-driven solutions.</li>
+          <li>Designed dashboards for construction, healthcare, and retail companies.</li>
+          <li>Data cleaning, modeling, and actionable insights.</li>
+          <li>Predictive models for operations and decision-making.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Delatfin -->
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-card">
+        <h3>Data Analyst (Freelance Project)</h3>
+        <p class="muted">Delatfin Construction • Jun 2022 – Jan 2023 • Zimbabwe</p>
+        <ul class="feat">
+          <li>Built Power BI dashboards for timelines and costs.</li>
+          <li>Prepared KPI reports; optimized resource allocation.</li>
+          <li>External consultant under a short-term project contract.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Avenues Clinic -->
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-card">
+        <h3>Clinical Data Analyst Intern</h3>
+        <p class="muted">The Avenues Clinic • Apr 2021 – May 2022 • Zimbabwe</p>
+        <ul class="feat">
+          <li>Admission data quality checks and validation.</li>
+          <li>Readmission dashboards and reporting support.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dairyboard & St Augustine -->
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-card">
+        <h3>Data Visualization &amp; Reporting Consultant</h3>
+        <p class="muted">Dairyboard Zimbabwe &amp; St Augustine School • Jan 2020 – Mar 2021 • Zimbabwe &amp; South Africa</p>
+        <ul class="feat">
+          <li>Sales &amp; student performance dashboards.</li>
+          <li>Automated reporting with Python + Excel.</li>
+          <li>Training sessions for management teams.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tongaat & Munny -->
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-card">
+        <h3>Junior Data Analyst (Freelance Support)</h3>
+        <p class="muted">Tongaat Huletts &amp; Munny Civil Engineering • Jan 2020 – Dec 2020 • Zimbabwe</p>
+        <ul class="feat">
+          <li>Analyzed production &amp; project data.</li>
+          <li>Dashboards and KPI summaries for senior management.</li>
+          <li>Project-based support to internal analytics teams.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="panel" id="contact">
+  <h2 class="section-title">Get In Touch</h2>
+  <p class="muted">I’m ready to discuss new opportunities and projects.</p>
+
+  <div class="contact-grid">
+    <a class="contact-card" id="emailCard" href="mailto:munakiebenezer@gmail.com">
+      <div class="contact-title">Email</div>
+      <div class="contact-sub">munakiebenezer@gmail.com</div>
+    </a>
+
+    <a class="contact-card" href="https://wa.me/13155669693" target="_blank" rel="noopener">
+      <div class="contact-title">WhatsApp</div>
+      <div class="contact-sub">+1 315 566 9693</div>
+    </a>
+
+    <div class="contact-card ok">
+      <div class="contact-title">Available for Projects</div>
+      <div class="contact-sub">Responding instantly</div>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-title">Location</div>
+      <div class="contact-sub">USA</div>
+    </div>
+  </div>
+</section>
+
+
 </body>
 </html>
+
+{% endblock %}
