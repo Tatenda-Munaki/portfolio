@@ -96,18 +96,50 @@ body{
 .card:hover{transform:scale(1.03);box-shadow:0 0 20px rgba(255,128,229,.18)}
 .big{font-size:28px;color:var(--accent);font-weight:800;margin-bottom:6px}
 
-/* ===== About ===== */
-#about .about-grid{display:grid;grid-template-columns: 380px 1fr; gap:28px; align-items:center}
-#about .about-img{display:flex;justify-content:center}
-#about .about-pic{
-  width:340px;max-width:100%;height:auto;border-radius:18px;object-fit:cover;
-  border:4px solid var(--accent);box-shadow:0 0 24px rgba(0,0,0,.25)
+/* ===== About (photo + rich copy) ===== */
+.about-side{
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap:24px;
+  align-items:flex-start;
+  margin-top:8px;
 }
-#about .about-text{font-size:16px;line-height:1.75;color:var(--muted)}
-#about .about-text p{margin-bottom:12px}
-@media(max-width:880px){
-  #about .about-grid{grid-template-columns:1fr;text-align:center}
-  #about .about-pic{width:240px;height:240px;border-radius:50%}
+
+.about-photo img{
+  width:220px;
+  height:280px;
+  object-fit:cover;
+  background:#101014;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+
+.about-copy p{
+  margin:0 0 12px;
+  line-height:1.8;
+  color:var(--text);
+}
+
+.about-cta{ margin-top:8px }
+
+.btn{
+  display:inline-block;
+  padding:.6rem 1rem;
+  border-radius:10px;
+  background:var(--brand);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 6px 20px rgba(199,93,255,.25);
+  transition:.2s ease;
+}
+.btn:hover{ transform:translateY(-1px); filter:brightness(1.05) }
+
+/* Responsive */
+@media (max-width: 900px){
+  .about-side{ grid-template-columns: 1fr }
+  .about-photo img{ width:180px; height:220px }
 }
 
 /* ===== Simple project cards ===== */
