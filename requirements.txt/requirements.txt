@@ -1,2 +1,2 @@
-Flask
-gunicorn
+echo Flask > requirements.txt
+echo gunicorn >> requirements.txt
