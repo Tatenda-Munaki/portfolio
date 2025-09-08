@@ -1,8 +1,79 @@
-<!doctype html>
-<html>
-  <head><meta charset="utf-8"><title>Tatenda Portfolio</title></head>
-  <body style="font-family:system-ui;padding:32px">
-    <h1>It works! ??</h1>
-    <p>Deployed from Railway.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatenda Munaki | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">Tatenda Munaki</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Hello, I'm <span>Tatenda</span></h2>
+            <p>Data Scientist | Machine Learning Engineer | Health Tech Enthusiast</p>
+            <a href="#projects" class="cta-btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm Tatenda Munaki, a master's student in Applied Data Science at Clarkson University.
+            I build data-driven solutions in health tech, predictive analytics, dashboards, and web applications.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">Python</div>
+            <div class="skill">Flask</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">SQL</div>
+            <div class="skill">R</div>
+            <div class="skill">Data Visualization</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Real Estate Price Analysis</h3>
+                <p>Predicted U.S. housing prices using ML, visualized with dashboards.</p>
+            </div>
+            <div class="project-card">
+                <h3>Hospital Readmission Prediction</h3>
+                <p>Built predictive models to assess patient readmission risks.</p>
+            </div>
+            <div class="project-card">
+                <h3>Mental Health Chatbot</h3>
+                <p>Streamlit app detecting suicide risk using NLP and ML models.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: tatenda@example.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/tatenda">linkedin.com/in/tatenda</a></p>
+        <p>GitHub: <a href="https://github.com/Tatenda-Munaki">github.com/Tatenda-Munaki</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tatenda Munaki. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
