@@ -289,6 +289,60 @@ body{
   margin-top: 12px;
 }
 
+/* ===== Contact ===== */
+:root{
+  /* tweak if you want a different pink/green */
+  --accent-pink: #ff76d6;
+  --ok-bg: #14532d;
+  --ok-border: #1a7f4b;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:14px;
+  margin-top:12px;
+}
+
+.contact-card{
+  display:block;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 16px;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.contact-card:hover{
+  background: var(--hover);
+  box-shadow: 0 0 18px var(--hover);
+  transform: translateY(-1px);
+}
+
+.contact-title{ font-weight: 700; margin-bottom: 6px; }
+.contact-sub{ color: var(--muted); }
+
+/* Pink email card */
+.contact-card.accent{
+  background: linear-gradient(180deg,
+              color-mix(in oklab, var(--accent-pink) 75%, transparent),
+              color-mix(in oklab, var(--accent-pink) 35%, transparent));
+  border-color: color-mix(in oklab, var(--accent-pink) 90%, transparent);
+  color: #1a0e17;
+}
+
+/* Green availability card */
+.contact-card.ok{
+  background: var(--ok-bg);
+  border-color: var(--ok-border);
+}
+
+/* Responsive */
+@media (max-width: 800px){
+  .contact-grid{ grid-template-columns: 1fr; }
+}
+
 /* Main card styles */
 .contact-card {
   display: block;
