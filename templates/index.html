@@ -1,18 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tatenda Munaki | Portfolio</title>
-
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-
 <!-- ===== Hero ===== -->
 <section class="hero" id="home">
   <h1 class="hero-title gradient-text">
@@ -24,31 +12,39 @@
   </p>
 
   <div class="hero-cta">
-    <a class="btn" href="{{ url_for('static', filename='assets/cv.pdf') }}" target="_blank" rel="noopener">Download CV</a>
+    <a class="btn" href="{{ url_for('static', filename='assets/Tattenda_Munaki_Resume.pdf') }}" target="_blank" rel="noopener">Download Resume</a>
     <a class="btn ghost" href="#projects">View Projects</a>
     <a class="btn hire" href="#contact">Hire Me</a>
   </div>
 
-  <!-- Stats row -->
+  <!-- Stats row (pretty metric cards) -->
   <div class="stats">
     <article class="stat-card">
-      <div class="stat-num">3+</div>
-      <div class="stat-label">Major Organizations</div>
+      <div class="stat-inner">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Major Organizations</div>
+      </div>
     </article>
 
     <article class="stat-card">
-      <div class="stat-num">15+</div>
-      <div class="stat-label">Successful Projects</div>
+      <div class="stat-inner">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Successful Projects</div>
+      </div>
     </article>
 
     <article class="stat-card">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Client Satisfaction</div>
+      <div class="stat-inner">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
     </article>
 
     <article class="stat-card">
-      <div class="stat-num">4+</div>
-      <div class="stat-label">Years Experience</div>
+      <div class="stat-inner">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
     </article>
   </div>
 
@@ -56,6 +52,8 @@
   <div class="collab">
     <div class="collab-title">Let’s Work Together</div>
     <div class="collab-sub">Ready to transform your ideas into solutions. Let’s discuss your next project.</div>
+    <a class="btn hire small" href="#contact">Hire Me</a>
+  </div>
 </section>
 
 <!-- ===== About Me ===== -->
@@ -103,15 +101,12 @@
   </div>
 </section>
 
-
-
 <!-- ===== Featured Projects ===== -->
 <section class="panel" id="projects">
   <h2 class="section-title">Featured Projects</h2>
   <p class="muted center">Innovative solutions built by Tatenda.</p>
 
   <div class="project-grid featured">
-
     <!-- Facial Recognition Attendance -->
     <article class="project-card">
       <div class="pimg">
@@ -168,7 +163,6 @@
         <a class="btn" href="#contact">Request Demo</a>
       </div>
     </article>
-
   </div>
 
   <!-- Smaller cards -->
@@ -217,7 +211,6 @@
     </article>
   </div>
 </section>
-
 
 <!-- ===== Skills ===== -->
 <section class="panel" id="skills">
@@ -294,23 +287,6 @@
     </article>
   </div>
 </section>
-
-<!-- (Old visual Methodologies card kept out of flow; safe to remove if unused) -->
-<div class="skill-card" style="display:none">
-  <div class="skill-icon" style="background:linear-gradient(135deg,#ffb400,#ff7e00);">
-    <img src="{{ url_for('static', filename='assets/icons/methodology.svg') }}" alt="Methodologies">
-  </div>
-  <h3>Methodologies</h3>
-  <div class="tags">
-    <span class="badge">CRISP-DM</span>
-    <span class="badge">Agile</span>
-    <span class="badge">Scrum</span>
-    <span class="badge">Kanban</span>
-    <span class="badge">MLOps</span>
-    <span class="badge">DevOps</span>
-    <span class="badge">QA Testing</span>
-  </div>
-</div>
 
 <!-- ===== Testimonials ===== -->
 <section class="panel">
@@ -431,7 +407,6 @@
   <p class="muted center">I'm ready to discuss new opportunities and projects.</p>
 
   <div class="contact-grid">
-
     <!-- Email (pink) -->
     <a class="contact-card accent" href="mailto:munakiebenezer@gmail.com" aria-label="Email Tatenda">
       <div class="contact-title">Email</div>
@@ -448,8 +423,7 @@
     <a
       class="contact-card"
       href="https://wa.me/13155669693?text=Hi%20Tatenda%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20potential%20projects%20and%20opportunities%20to%20work%20together."
-      target="_blank"
-      rel="noopener"
+      target="_blank" rel="noopener"
       aria-label="Start a WhatsApp chat with Tatenda"
     >
       <div class="contact-title">WhatsApp</div>
@@ -467,12 +441,7 @@
       <div class="contact-title">Available for Projects</div>
       <div class="contact-sub">Responding instantly</div>
     </div>
-
   </div>
 </section>
-
-
-</body>
-</html>
 
 {% endblock %}
