@@ -1,33 +1,175 @@
-<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Tatenda Portfolio</title> <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> </head> <body> <header class="nav"> <div class="brand"> <img src="{{ url_for('static', filename='assets/tatenda.jpeg') }}" alt="Tatenda" class="profile-pic"> <span class="brand-text gradient-text">Tatenda</span> </div> <nav class="links"> <a href="#top">Home</a> <a href="#about">About</a> <a href="#projects">Projects</a> <a href="#skills">Skills</a> <a href="#testimonials">Testimonials</a> <a href="#experience">Experience</a> <a href="#contact">Contact</a> <a href="https://github.com/Tatenda-Munaki" target="_blank" rel="noopener">GitHub</a> <a class="btn small" href="{{ url_for('static', filename='assets/Tatenda_Munaki_Resume.pdf') }}" target="_blank" rel="noopener" download> Tatenda Resume </a> </nav>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tatenda Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<header class="nav">
+  <div class="brand">
+    <img src="{{ url_for('static', filename='assets/tatenda.jpeg') }}" alt="Tatenda" class="profile-pic">
+    <span class="brand-text gradient-text">Tatenda</span>
+  </div>
+  <nav class="links">
+    <a href="#top">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/Tatenda-Munaki" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn small"
+       href="{{ url_for('static', filename='assets/Tatenda_Munaki_Resume.pdf') }}"
+       target="_blank" rel="noopener" download>
+      Tatenda Resume
+    </a>
+  </nav>
 
-<button class="burger" id="burger" aria-label="menu">≡</button>
-
+  <button class="burger" id="burger" aria-label="menu">≡</button>
 </header>
 
 <a href="#contact" class="fab-hire" aria-label="Hire Me">Hire Me</a>
 
-<div class="menu-overlay" id="menu"> <div class="menu-card"> <div class="menu-head"> <div class="brand"> <img src="{{ url_for('static', filename='assets/tatenda.jpeg') }}" class="profile-pic" alt="Tatenda"> <span class="brand-text gradient-text">Tatenda</span> </div> <button class="close" id="close" aria-label="close">✕</button> </div>
-<ul class="menu-list">
-  <li><a href="#top" class="m-link">Home</a></li>
-  <li><a href="#about" class="m-link">About</a></li>
-  <li><a href="#projects" class="m-link">Projects</a></li>
-  <li><a href="#skills" class="m-link">Skills</a></li>
-  <li><a href="#testimonials" class="m-link">Testimonials</a></li>
-  <li><a href="#experience" class="m-link">Experience</a></li>
-  <li><a href="#contact" class="m-link">Contact</a></li>
-</ul>
+<div class="menu-overlay" id="menu">
+  <div class="menu-card">
+    <div class="menu-head">
+      <div class="brand">
+        <img src="{{ url_for('static', filename='assets/tatenda.jpeg') }}" class="profile-pic" alt="Tatenda">
+        <span class="brand-text gradient-text">Tatenda</span>
+      </div>
+      <button class="close" id="close" aria-label="close">✕</button>
+    </div>
 
-<div class="menu-actions">
-  <div class="icons">
-    <a href="https://www.linkedin.com/in/tatenda-ebenezer-munaki-033426261/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/Tatenda-Munaki" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://wa.me/13155669693" target="_blank" rel="noopener">WhatsApp</a>
+    <ul class="menu-list">
+      <li><a href="#top" class="m-link">Home</a></li>
+      <li><a href="#about" class="m-link">About</a></li>
+      <li><a href="#projects" class="m-link">Projects</a></li>
+      <li><a href="#skills" class="m-link">Skills</a></li>
+      <li><a href="#testimonials" class="m-link">Testimonials</a></li>
+      <li><a href="#experience" class="m-link">Experience</a></li>
+      <li><a href="#contact" class="m-link">Contact</a></li>
+    </ul>
+
+    <div class="menu-actions">
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/tatenda-ebenezer-munaki-033426261/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Tatenda-Munaki" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://wa.me/13155669693" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <a class="btn"
+         href="{{ url_for('static', filename='assets/Tatenda_Munaki_Resume.pdf') }}"
+         target="_blank" rel="noopener" download>
+        Resume
+      </a>
+    </div>
   </div>
-  <a class="btn"
-     href="{{ url_for('static', filename='assets/Tatenda_Munaki_Resume.pdf') }}"
-     target="_blank" rel="noopener" download>
-    Resume
-  </a>
 </div>
 
-</div> </div> <main id="top" class="container"> {% block content %}{% endblock %} </main> <footer class="footer"> <div>© <span id="year"></span> Tatenda</div> <div class="social"> <a href="https://www.linkedin.com/in/tatenda-ebenezer-munaki-033426261/" target="_blank" rel="noopener">LinkedIn</a> <a href="https://github.com/Tatenda-Munaki" target="_blank" rel="noopener">GitHub</a> <a id="emailCard" href="mailto:munakiebenezer@gmail.com">Email</a> </div> </footer> <script> document.getElementById("year").textContent = new Date().getFullYear() const burger = document.getElementById("burger") const closeBtn = document.getElementById("close") const menu = document.getElementById("menu") const links = document.querySelectorAll(".m-link") function openMenu(){ menu.classList.add("open") } function closeMenu(){ menu.classList.remove("open") } burger.addEventListener("click", openMenu) closeBtn.addEventListener("click", closeMenu) links.forEach(l => l.addEventListener("click", closeMenu)) const emailCard = document.getElementById('emailCard') if (emailCard) { emailCard.addEventListener('click', function () { const mailto = this.getAttribute('href') window.location.href = mailto setTimeout(function () { window.open('https://mail.google.com/mail/?view=cm&to=munakiebenezer@gmail.com','_blank','noopener') }, 400) }) } </script> </body> </html>
+<main id="top" class="container">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <div>© <span id="year"></span> Tatenda</div>
+  <div class="social">
+    <a href="https://www.linkedin.com/in/tatenda-ebenezer-munaki-033426261/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/Tatenda-Munaki" target="_blank" rel="noopener">GitHub</a>
+    <a id="emailCard" href="mailto:munakiebenezer@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const burger = document.getElementById("burger");
+  const closeBtn = document.getElementById("close");
+  const menu = document.getElementById("menu");
+  const links = document.querySelectorAll(".m-link");
+
+  function openMenu(){ menu.classList.add("open"); }
+  function closeMenu(){ menu.classList.remove("open"); }
+
+  burger.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  links.forEach(l => l.addEventListener("click", closeMenu));
+
+  const emailCard = document.getElementById('emailCard');
+  if (emailCard) {
+    emailCard.addEventListener('click', function () {
+      const mailto = this.getAttribute('href');
+      window.location.href = mailto;
+      setTimeout(function () {
+        window.open('https://mail.google.com/mail/?view=cm&to=munakiebenezer@gmail.com','_blank','noopener');
+      }, 400);
+    });
+  }
+</script>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";  // replace with real key
+  const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";  // replace with real ID
+  const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  // replace with real template
+
+  if (EMAILJS_PUBLIC_KEY && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
+
+  const form = document.getElementById("contactForm");
+  if (form) {
+    const btn = document.getElementById("sendBtn");
+    const text = document.getElementById("sendText");
+    const spin = document.getElementById("sendSpinner");
+    const banner = document.getElementById("formBanner");
+
+    function setLoading(on){
+      if(on){
+        btn.disabled = true;
+        if (spin) spin.style.display = "inline-block";
+        if (text) text.textContent = "Sending...";
+      }else{
+        btn.disabled = false;
+        if (spin) spin.style.display = "none";
+        if (text) text.textContent = "Send Message";
+      }
+    }
+
+    function showBanner(msg, type){
+      if (!banner) return;
+      banner.className = "alert";
+      banner.textContent = msg;
+      if (type === "ok") banner.classList.add("ok");
+      if (type === "err") banner.classList.add("err");
+      banner.classList.add("show");
+      requestAnimationFrame(()=> banner.classList.add("pop"));
+    }
+
+    form.addEventListener("submit", async (e)=>{
+      e.preventDefault();
+      setLoading(true);
+      if (banner) banner.className = "alert";
+
+      const data = {
+        from_name: document.getElementById("from_name").value.trim(),
+        reply_to: document.getElementById("reply_to").value.trim(),
+        message: document.getElementById("message").value.trim()
+      };
+
+      try{
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, data);
+        form.reset();
+        showBanner("Message sent successfully! I'll reply soon.", "ok");
+      }catch(err){
+        console.error(err);
+        showBanner("Send failed. Try again or email me at munakiebenezer@gmail.com", "err");
+      }finally{
+        setLoading(false);
+      }
+    });
+  }
+</script>
+</body>
+</html>

@@ -190,6 +190,30 @@
   <div class="contact-sub">Responding instantly</div>
 </div>
 
-</div> </section> <section class="panel hover-wiggle" id="contact-form"> <h2 class="section-title">Send a Message</h2> <form class="contact-form" action="https://formsubmit.co/munakiebenezer@gmail.com" method="POST"> <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="_subject" value="New portfolio inquiry"> <div class="form-row"> <label for="name">Your Name</label> <input id="name" name="name" type="text" placeholder="Enter your full name" required> </div> <div class="form-row"> <label for="email">Email Address</label> <input id="email" name="email" type="email" placeholder="your.email@example.com" required> </div> <div class="form-row"> <label for="details">Project Details</label> <textarea id="details" name="message" rows="6" placeholder="Tell me about your project, timeline, and requirements..." required></textarea> </div> <button class="btn cta-box" type="submit">Send Message</button> </form> </section>
+<!-- ===== Send a Message ===== -->
+<section class="panel" id="send-message">
+  <h2 class="section-title">Send a Message</h2>
+
+  <form id="contactForm" class="contact-form" novalidate>
+    <label class="label">Your Name</label>
+    <input class="input" type="text" name="from_name" id="from_name" placeholder="Enter your full name" required>
+
+    <label class="label">Email Address</label>
+    <input class="input" type="email" name="reply_to" id="reply_to" placeholder="your.email@example.com" required>
+
+    <label class="label">Project Details</label>
+    <textarea class="textarea" name="message" id="message" rows="6" placeholder="Tell me about your project, timeline, and requirements..." required></textarea>
+
+    <button id="sendBtn" class="btn wide" type="submit">
+      <span id="sendText">Send Message</span>
+      <span id="sendSpinner" class="spinner" aria-hidden="true"></span>
+    </button>
+
+    <!-- Inline success or error banner -->
+    <div id="formBanner" class="alert" role="status" aria-live="polite"></div>
+  </form>
+</section>
+
+
 
 {% endblock %}

@@ -336,3 +336,30 @@ box-shadow:0 0 0 3px rgba(125,232,255,.15);
 .timeline:before
 .t-dot{ left:4px }
 }
+
+/* Contact form */
+.contact-form{display:grid;gap:12px}
+.label{font-weight:700}
+.input,.textarea{
+  width:100%;padding:12px 14px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.12);background:#19202b;color:#e8ecf1;outline:none
+}
+.input:focus,.textarea:focus{border-color:#7aa2ff;box-shadow:0 0 0 3px rgba(122,162,255,.15)}
+.btn.wide{width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px}
+.spinner{
+  width:16px;height:16px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.35);border-top-color:#fff;display:none;animation:spin 1s linear infinite
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Inline banner */
+.alert{
+  display:none;margin-top:10px;padding:12px 14px;border-radius:12px;
+  font-weight:700;text-align:center;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);color:#e8ecf1;
+  box-shadow:0 10px 28px rgba(0,0,0,.25);transition:transform .15s ease,opacity .15s ease;opacity:0
+}
+.alert.show{display:block;opacity:1}
+.alert.ok{background:linear-gradient(90deg,#22c55e,#a7f3d0);color:#082b16;border-color:#34d399}
+.alert.err{background:linear-gradient(90deg,#f43f5e,#fecaca);color:#2a0b12;border-color:#fb7185}
+.alert.pop{transform:scale(1.02)}
